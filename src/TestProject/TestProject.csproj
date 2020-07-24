@@ -1,18 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\MainLibrary\MainLibrary.props" />
+  <Import Project="..\MainLibrary\MainLibrary.props"/>
 
-    <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
-        <OutputType>Exe</OutputType>
-        <EnableCustomTasks Condition="'$(EnableCustomTasks)' == ''">False</EnableCustomTasks>
-        <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\netcoreapp2.1\publish</CustomTasksDirectory>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <EnableCustomTasks Condition="'$(EnableCustomTasks)' == ''">False</EnableCustomTasks>
+    <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\netcoreapp2.1\publish</CustomTasksDirectory>
+  </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\MainLibrary\MainLibrary.csproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MainLibrary\MainLibrary.csproj"/>
+  </ItemGroup>
 
-    <Import Project="..\MainLibrary\MainLibrary.targets" />
+  <Import Project="..\MainLibrary\MainLibrary.targets"/>
 
 </Project>

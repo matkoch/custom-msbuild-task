@@ -1,42 +1,42 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.1;net472</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MainLibrary\MainLibrary.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.3.0" CopyLocal="false" Publish="false" ExcludeAssets="runtime"/>
+    <PackageReference Include="Microsoft.Build.Framework" Version="16.3.0" CopyLocal="false" Publish="false" ExcludeAssets="runtime"/>
+    <PackageReference Include="System.Collections.Immutable" Version="1.6.0" CopyLocal="false" Publish="false"/>
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" CopyLocal="false" Publish="false"/>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
+    <PackageReference Include="Microsoft.VisualStudio.Setup.Configuration.Interop" Version="1.16.30" CopyLocal="false" Publish="false"/>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp'">
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.6.0" CopyLocal="false" Publish="false"/>
+  </ItemGroup>
+
+  <Target Name="RemoveMicrosoftBuildDllsFromOutput" AfterTargets="ResolveReferences">
     <PropertyGroup>
-        <TargetFrameworks>netcoreapp2.1;net472</TargetFrameworks>
+      <NonCopyLocalPackageReferences Condition="'%(PackageReference.CopyLocal)' == 'false'">;@(PackageReference);</NonCopyLocalPackageReferences>
     </PropertyGroup>
-
     <ItemGroup>
-        <ProjectReference Include="..\MainLibrary\MainLibrary.csproj" />
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="$(NonCopyLocalPackageReferences.Contains(';%(ReferenceCopyLocalPaths.NuGetPackageId);'))"/>
     </ItemGroup>
-    
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.3.0" CopyLocal="false" Publish="false" ExcludeAssets="runtime" />
-        <PackageReference Include="Microsoft.Build.Framework" Version="16.3.0" CopyLocal="false" Publish="false" ExcludeAssets="runtime" />
-        <PackageReference Include="System.Collections.Immutable" Version="1.6.0" CopyLocal="false" Publish="false" />
-        <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" CopyLocal="false" Publish="false" />
-    </ItemGroup>
+  </Target>
 
-    <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
-        <PackageReference Include="Microsoft.VisualStudio.Setup.Configuration.Interop" Version="1.16.30" CopyLocal="false" Publish="false" />
-    </ItemGroup>
-
-    <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp'">
-        <PackageReference Include="System.Text.Encoding.CodePages" Version="4.6.0" CopyLocal="false" Publish="false" />
-    </ItemGroup>
-
-    <Target Name="RemoveMicrosoftBuildDllsFromOutput" AfterTargets="ResolveReferences">
-        <PropertyGroup>
-            <NonCopyLocalPackageReferences Condition="'%(PackageReference.CopyLocal)' == 'false'">;@(PackageReference);</NonCopyLocalPackageReferences>
-        </PropertyGroup>
-        <ItemGroup>
-            <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="$(NonCopyLocalPackageReferences.Contains(';%(ReferenceCopyLocalPaths.NuGetPackageId);'))" />
-        </ItemGroup>
-    </Target>
-
-    <ItemGroup>
-        <Content Include="CustomTasks.targets">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-    </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomTasks.targets">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>
