@@ -11,7 +11,7 @@ namespace CustomTasks
 
         protected override bool ExecuteInner()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
