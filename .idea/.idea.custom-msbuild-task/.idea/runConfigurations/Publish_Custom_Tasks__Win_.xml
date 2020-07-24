@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Publish CustomTasks" type="RunNativeExe" factoryName="Native Executable">
-    <option name="EXE_PATH" value="/usr/local/share/dotnet/dotnet" />
+  <configuration default="false" name="Publish Custom Tasks [Win]" type="RunNativeExe" factoryName="Native Executable">
+    <option name="EXE_PATH" value="$PROJECT_DIR$/../../Program Files/dotnet/dotnet.exe" />
     <option name="PROGRAM_PARAMETERS" value="publish --framework netcoreapp2.1" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/CustomTasks/" />
     <option name="PASS_PARENT_ENVS" value="1" />
