@@ -1,4 +1,4 @@
-# Sample for Custom MSBuild Tasks
+# Custom MSBuild Task
 
 Run Configurations for [JetBrains Rider](https://jetbrains.com/rider) are included and allow seamless debugging:
 
