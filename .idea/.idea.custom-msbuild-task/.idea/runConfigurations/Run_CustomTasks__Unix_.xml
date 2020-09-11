@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Run CustomTasks [Unix]" type="RunExe" factoryName=".NET Executable">
-    <option name="EXE_PATH" value="/usr/local/share/dotnet/sdk/3.1.302/MSBuild.dll" />
+    <option name="EXE_PATH" value="/usr/local/share/dotnet/sdk/3.1.401/MSBuild.dll" />
     <option name="PROGRAM_PARAMETERS" value="/t:Clean;Restore;Pack /p:EnableCustomTasks=True" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/TestProject" />
     <option name="PASS_PARENT_ENVS" value="1" />
