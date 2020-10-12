@@ -3,10 +3,10 @@
   <Import Project="..\MainLibrary\MainLibrary.props"/>
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFrameworks>netcoreapp2.1;net472</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <CustomTasksEnabled Condition="'$(CustomTasksEnabled)' == ''">False</CustomTasksEnabled>
-    <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\netcoreapp2.1\publish</CustomTasksDirectory>
+    <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\$(TargetFramework)\publish</CustomTasksDirectory>
   </PropertyGroup>
 
   <ItemGroup>
