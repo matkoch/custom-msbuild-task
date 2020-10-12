@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Run CustomTasks [Win]" type="RunExe" factoryName=".NET Executable">
     <option name="EXE_PATH" value="$PROJECT_DIR$/../../Program Files/dotnet/sdk/3.1.401/MSBuild.dll" />
-    <option name="PROGRAM_PARAMETERS" value="/t:Clean;Restore;Pack /p:CustomTasksEnabled=True" />
+    <option name="PROGRAM_PARAMETERS" value="/t:Clean;Restore;Pack /p:CustomTasksEnabled=True /bl" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/TestProject" />
     <option name="PASS_PARENT_ENVS" value="1" />
     <option name="USE_EXTERNAL_CONSOLE" value="0" />
