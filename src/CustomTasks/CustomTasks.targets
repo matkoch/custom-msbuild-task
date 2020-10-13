@@ -7,12 +7,6 @@
 
   <UsingTask TaskName="$(MSBuildThisFileName).CustomTask" AssemblyFile="$(CustomTasksAssembly)"/>
 
-  <!-- Default Properties -->
-  <PropertyGroup>
-    <CustomTaskContinueOnError Condition="'$(CustomTaskContinueOnError)' == ''">False</CustomTaskContinueOnError>
-    <CustomTaskStringParameter Condition="'$(CustomTaskStringParameter)' == ''">Default Value</CustomTaskStringParameter>
-  </PropertyGroup>
-
   <Target Name="RunCustomTask" BeforeTargets="CoreCompile">
     <CustomTask
             ContinueOnError="$(CustomTaskContinueOnError)"

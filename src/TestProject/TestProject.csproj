@@ -1,12 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <CustomTasksEnabled Condition="'$(CustomTasksEnabled)' == ''">False</CustomTasksEnabled>
+    <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\$(TargetFramework)\publish</CustomTasksDirectory>
+  </PropertyGroup>
+
   <Import Project="..\MainLibrary\MainLibrary.props"/>
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.1;net472</TargetFrameworks>
     <OutputType>Exe</OutputType>
-    <CustomTasksEnabled Condition="'$(CustomTasksEnabled)' == ''">False</CustomTasksEnabled>
-    <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\$(TargetFramework)\publish</CustomTasksDirectory>
   </PropertyGroup>
 
   <ItemGroup>

@@ -33,6 +33,10 @@
   </Target>
 
   <ItemGroup>
+    <Content Include="CustomTasks.props">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
     <Content Include="CustomTasks.targets">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <CopyToPublishDirectory>Always</CopyToPublishDirectory>
