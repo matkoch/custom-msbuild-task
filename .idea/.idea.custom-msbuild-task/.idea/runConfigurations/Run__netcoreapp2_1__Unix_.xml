@@ -8,7 +8,7 @@
     <option name="USE_MONO" value="0" />
     <option name="RUNTIME_ARGUMENTS" value="" />
     <method v="2">
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish CustomTasks [Unix]" run_configuration_type="RunNativeExe" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish: netcoreapp2.1 [Unix]" run_configuration_type="RunNativeExe" />
     </method>
   </configuration>
 </component>
