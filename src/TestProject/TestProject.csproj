@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <CustomTasksEnabled Condition="'$(CustomTasksEnabled)' == ''">False</CustomTasksEnabled>
+    <CustomTasksEnabled>False</CustomTasksEnabled>
     <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\$(TargetFramework)\publish</CustomTasksDirectory>
   </PropertyGroup>
 
