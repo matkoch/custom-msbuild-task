@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <CustomTaskContinueOnError>False</CustomTaskContinueOnError>
-    <CustomTaskStringParameter>Default Value</CustomTaskStringParameter>
+    <CustomTaskStringParameter>Default</CustomTaskStringParameter>
   </PropertyGroup>
 
 </Project>
