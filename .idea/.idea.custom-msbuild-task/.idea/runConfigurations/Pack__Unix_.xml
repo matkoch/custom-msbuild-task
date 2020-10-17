@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Pack [Win]" type="ShConfigurationType">
+  <configuration default="false" name="Pack [Unix]" type="ShConfigurationType">
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="$PROJECT_DIR$/pack.cmd" />
     <option name="SCRIPT_OPTIONS" value="" />
