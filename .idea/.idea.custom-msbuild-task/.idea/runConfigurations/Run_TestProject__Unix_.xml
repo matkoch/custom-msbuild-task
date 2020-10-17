@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run: netcoreapp2.1 [Unix]" type="RunExe" factoryName=".NET Executable">
-    <option name="EXE_PATH" value="/usr/local/share/dotnet/sdk/3.1.401/MSBuild.dll" />
+  <configuration default="false" name="Run TestProject [Unix]" type="RunExe" factoryName=".NET Executable">
+    <option name="EXE_PATH" value="/usr/local/share/dotnet/sdk/3.1.402/MSBuild.dll" />
     <option name="PROGRAM_PARAMETERS" value="/t:Rebuild /p:CustomTasksEnabled=True /bl /p:TargetFramework=netcoreapp2.1" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/TestProject" />
     <option name="PASS_PARENT_ENVS" value="1" />
