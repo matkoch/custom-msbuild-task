@@ -1,11 +1,8 @@
-﻿using System;
+﻿namespace MainLibrary;
 
-namespace MainLibrary
+public static class Utility
 {
-    public static class Utility
+    public static void Foo()
     {
-        public static void Foo()
-        {
-        }
     }
 }
