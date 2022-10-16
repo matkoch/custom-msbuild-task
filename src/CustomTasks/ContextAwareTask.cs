@@ -12,14 +12,14 @@ namespace CustomTasks;
 
 public abstract class ContextAwareTask : Task
 {
-    protected virtual string ManagedDllDirectory => Path.GetDirectoryName(new Uri(GetType().GetTypeInfo().Assembly.CodeBase).LocalPath);
+    protected virtual string ManagedDllDirectory => Path.GetDirectoryName(new Uri(GetType().GetTypeInfo().Assembly.Location).LocalPath);
 
     protected virtual string UnmanagedDllDirectory => null;
 
     public sealed override bool Execute()
     {
 #if NETCOREAPP
-        var taskAssemblyPath = new Uri(GetType().GetTypeInfo().Assembly.CodeBase).LocalPath;
+        var taskAssemblyPath = new Uri(GetType().GetTypeInfo().Assembly.Location).LocalPath;
         var context = new CustomAssemblyLoader(this);
         var inContextAssembly = context.LoadFromAssemblyPath(taskAssemblyPath);
         var innerTaskType = inContextAssembly.GetType(GetType().FullName);
