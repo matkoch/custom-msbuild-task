@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Run TestProject [Win]" type="RunExe" factoryName=".NET Executable">
-    <option name="EXE_PATH" value="$USER_HOME$/Program Files/dotnet/sdk/3.1.401/MSBuild.dll" />
+    <option name="EXE_PATH" value="$USER_HOME$/Program Files/dotnet/sdk/6.0.100/MSBuild.dll" />
     <option name="PROGRAM_PARAMETERS" value="/t:Rebuild /p:CustomTasksEnabled=True /bl /p:TargetFramework=netcoreapp2.1" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/TestProject" />
     <option name="PASS_PARENT_ENVS" value="1" />
@@ -8,7 +8,7 @@
     <option name="USE_MONO" value="0" />
     <option name="RUNTIME_ARGUMENTS" value="" />
     <method v="2">
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish: netcoreapp2.1 [Win]" run_configuration_type="RunNativeExe" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish CustomTasks [Win]" run_configuration_type="RunNativeExe" />
     </method>
   </configuration>
 </component>
