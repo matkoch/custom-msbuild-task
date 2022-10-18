@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
@@ -38,7 +40,7 @@ public class CustomTask : ContextAwareTask
                 columnNumber: 10,
                 endLineNumber: 0, // ignored if 0
                 endColumnNumber: 0, // ignored if 0
-                message: "message",
+                message: Assembly.GetExecutingAssembly().Location,
                 helpKeyword: "helpKeyword",
                 senderName: "senderName"));
 
