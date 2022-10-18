@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp6.0</TargetFramework>
+    <TargetFrameworks>netcoreapp6.0;net472</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <CustomTasksEnabled>False</CustomTasksEnabled>
     <CustomTasksDirectory>$(MSBuildThisFileDirectory)\..\CustomTasks\bin\Debug\$(TargetFramework)\publish</CustomTasksDirectory>
