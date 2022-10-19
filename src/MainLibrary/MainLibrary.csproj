@@ -7,8 +7,6 @@
   <ItemGroup Condition="'$(TargetFramework)' == ''">
     <None Include="$(MSBuildProjectName).props" PackagePath="build" Pack="true"/>
     <None Include="$(MSBuildProjectName).targets" PackagePath="build" Pack="true"/>
-    <None Include="..\CustomTasks\CustomTasks.targets" PackagePath="build\netcore" Pack="true"/>
-    <None Include="..\CustomTasks\CustomTasks.targets" PackagePath="build\netfx" Pack="true"/>
     <None Include="..\CustomTasks\bin\$(Configuration)\netcoreapp6.0\publish\**\*.*" PackagePath="build\netcore" Pack="true"/>
     <None Include="..\CustomTasks\bin\$(Configuration)\net472\publish\**\*.*" PackagePath="build\netfx" Pack="true"/>
   </ItemGroup>
