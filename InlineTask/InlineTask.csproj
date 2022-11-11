@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <UsingTask TaskName="PathGetFileName" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+        <ParameterGroup>
+            <Path ParameterType="System.String" Required="true" />
+            <FileName ParameterType="System.String" Output="true" />
+        </ParameterGroup>
+        <Task>
+            <Using Namespace="System" />
+            <Code Type="Fragment" Language="C#">
+                <![CDATA[
+                FileName = System.IO.Path.GetFileName(Path);
+            ]]>
+            </Code>
+        </Task>
+    </UsingTask>
+
+    <Target Name="Demo">
+        <PathGetFileName Path="$(MSBuildThisFileName)">
+            <Output TaskParameter="FileName" PropertyName="FileName" />
+        </PathGetFileName>
+        <Error Text="Project file name: $(FileName)" />
+    </Target>
+
+</Project>

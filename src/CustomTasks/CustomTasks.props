@@ -1,7 +1,6 @@
 <Project>
 
   <PropertyGroup>
-    <CustomTaskContinueOnError>False</CustomTaskContinueOnError>
     <CustomTaskStringParameter>Default</CustomTaskStringParameter>
   </PropertyGroup>
 
