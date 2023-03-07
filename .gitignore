@@ -15,3 +15,6 @@
 /output
 [Dd]ebug/
 [Rr]elease/
+
+/.vs
+/.idea
